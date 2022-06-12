@@ -1,0 +1,188 @@
+.navbar {
+    background-color: #e3f2fd;
+}
+
+.accordion {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 20px, rgba(0, 0, 0, 0.12) 0px -12px 20px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 10px;
+}
+
+.accordion>div>span {
+    background-color: #ffffff;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px;
+    border: 1px solid #8ab9f6;
+    font-weight: bold;
+}
+
+.accordion>div.show>span {
+    /* font-weight: normal; */
+    color: blue;
+    transition: 1s;
+}
+
+.accordion>div>span:after {
+    content: "\25bc";
+    float: right;
+}
+
+.accordion>div.show>span:after {
+    content: "\25b2";
+}
+
+.accordion>div>span:hover,
+.accordion>div.show>span {
+    background-color: rgb(163, 197, 245, 0.2);
+}
+
+.accordion>div>div {
+
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    padding: 0 15px;
+}
+
+.accordion>div.show:last-child>div {
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+}
+
+/* 9 */
+.accordion>div:first-child>span {
+    border-radius: 10px 10px 0 0;
+}
+
+/* 13 */
+.accordion>div:last-child>span {
+    border-radius: 0 0 10px 10px;
+    /* transition: all 3s; */
+
+}
+
+/* 17 */
+.accordion>div.show:last-child>span {
+    border-radius: 0;
+    transition: all 0.5s;
+}
+
+
+.accordion>div.show>div {
+    /* display: block; */
+    max-height: initial;
+    padding: 15px;
+    transition: all 0.5s;
+}
+
+.scroll {
+    background-image: url('/media/16259.png');
+    filter: invert(1);
+    background-color: rgb(91, 34, 7);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: -50px;
+    cursor: auto !important;
+    opacity: 0;
+    transition: 0.15s;
+}
+
+.scroll.show {
+    cursor: pointer !important;
+    opacity: 1;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.scroll2 {
+    background-color: gray;
+    color: beige;
+    background-position: center;
+    width: 90px;
+    height: 30px;
+    border-radius: 0 22.5px 0 22.5px;
+    border: 0;
+    opacity: 1;
+    transition: 0.2s;
+    position: fixed;
+    left: -25%;
+    top: 50%;
+}
+
+.scroll2.show {
+    opacity: 0.75;
+    position: fixed;
+    left: 2%;
+    top: 50%;
+}
+
+.popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+    transition: background-color 1s;
+}
+
+.popup-wrapper.show {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.popup {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    position: fixed;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s;
+    visibility: hidden;
+
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup>h4 {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.popup>h4>span.popup-close:after {
+    content: "\00D7";
+    float: right;
+    cursor: pointer;
+}
+
+.popup>button.popup-close {
+    float: right;
+    margin: 15px 20px;
+}
+
+.login {
+    min-height: 500px;
+    min-width: 900px;
+}
+
+.pp {
+    min-width: 100px;
+}
