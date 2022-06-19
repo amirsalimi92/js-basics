@@ -1,5 +1,4 @@
 let accordion = document.querySelector(".accordion")
-//console.log(accordion.children)
 
 Array.from(accordion.children).forEach(wrapper => {
     wrapper.querySelector("span").addEventListener("click", e => {

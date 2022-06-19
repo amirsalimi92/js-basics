@@ -1,5 +1,10 @@
 .navbar {
     background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+.navbar-theme {
+    background-color: #fde3e5;
 }
 
 .accordion {
@@ -185,4 +190,45 @@
 
 .pp {
     min-width: 100px;
+}
+
+
+/* Theme's page */
+
+#themeNav {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+div.themes>div {
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 0.5px solid #000
+}
+
+.day {
+    background-color: #fff;
+    color: #000;
+}
+
+.night {
+    background-color: #1e1e1e;
+    color: rgb(204, 197, 197);
+}
+
+.night>div>div>div>div.themes>div {
+    border: 0.5px solid #fff
+}
+
+.sunny {
+    background-color: #f5f5af;
+    color: #000;
+}
+
+.icy {
+    background-color: #ddeced;
+    color: #000;
 }

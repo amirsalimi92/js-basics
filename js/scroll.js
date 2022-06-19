@@ -1,4 +1,3 @@
-
 let btn = document.querySelector("#scroll")
 
 window.addEventListener("scroll", e => {
