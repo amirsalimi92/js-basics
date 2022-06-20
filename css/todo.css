@@ -3,6 +3,21 @@
     cursor: pointer;
 }
 
+.list-group>li,
+.form-control {
+    opacity: 0.8;
+}
+
+.list-group>li:hover,
+.form-control:hover,
+.form-control:focus {
+    opacity: 1;
+}
+
+.list-group-item>img:hover {
+    transform: scale(1.15);
+}
+
 video {
     position: fixed;
     top: 0;

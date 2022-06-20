@@ -14,12 +14,18 @@
 
 <body>
     <div class="container">
-        <div class="w-50 mx-auto my-3">
-            <h1 id="header" class="text-center text-light mt-5 mb-3">Todo app</h1>
-            <div id="actions" class="text-center mb-3">
-                <a class="btn btn-primary" data-action="add">Add</a>
-                <a class="btn btn-success" data-action="search">Search</a>
+        <div class="row">
+            <div class="col align-self-center">
+                <a href="/index.html" class="btn btn-danger pp">Back</a>
             </div>
+            <div class="w-50 mx-auto my-3 col">
+                <h1 id="header" class="text-center text-light mt-5 mb-3">Todo app</h1>
+                <div id="actions" class="text-center mb-3">
+                    <a class="btn btn-primary pp" data-action="add">Add</a>
+                    <a class="btn btn-success pp" data-action="search">Search</a>
+                </div>
+            </div>
+            <div class="col"></div>
         </div>
         <div id="form-wrapper" class="mb-3">
             <form id="add">

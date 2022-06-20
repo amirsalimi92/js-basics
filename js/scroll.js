@@ -28,5 +28,5 @@ window.addEventListener("scroll", e => {
 })
 
 btn2.addEventListener("click", e => {
-    window.scrollTo({ top: accLoc - 50, behavior: "smooth" })
+    window.scrollTo({ top: accLoc - 150, behavior: "smooth" })
 })
