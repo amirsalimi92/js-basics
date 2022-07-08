@@ -71,3 +71,45 @@ createTodos(todos)
 
 // Add todo in lists
 
+let actions = document.querySelector("#actions")
+let formWrapper = document.querySelector("#form-wrapper")
+
+Array.from(actions.children).forEach(action => {
+    // console.log(action.dataset.action)
+    if (action.dataset.action == "add") {
+        action.addEventListener("click", e => {
+            formWrapper.innerHTML = `<form id="add">
+            <input type="text" class="form-control" name="add" placeholder="Add todo...">
+        </form>`
+            createTodos(todos)
+            let add = document.querySelector("#add")
+            add.addEventListener("submit", e => {
+                e.preventDefault()
+                if (add.add.value) {
+                    todos.push({ content: add.add.value, status: true })
+                    localStorage.setItem("todos", JSON.stringify(todos))
+                    createTodos(todos)
+                    location.reload()
+                }
+                form.reset()
+            })
+        })
+    } else if (action.dataset.action == "search") {
+        action.addEventListener("click", e => {
+            formWrapper.innerHTML = `<form id="search">
+            <input type="text" class="form-control" name="search" placeholder="Search a todo...">
+        </form>`
+
+            let search = document.querySelector("#search")
+            search.addEventListener("keyup", e => {
+                e.preventDefault()
+                if (search.search.value) {
+                    let filterTodo = todos.filter(todo => todo.content.includes(search.search.value))
+                    createTodos(filterTodo)
+                } else {
+                    createTodos(todos)
+                }
+            })
+        })
+    }
+});
